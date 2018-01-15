@@ -22,4 +22,4 @@
 ######################################
 
 # Get updates list    | Rm 1st line | "\" -> " "    | Package name and version
-apt list --upgradable | tail -n +2  | sed 's/\// /' | awk '{print $1 "\t" $3}'
+dnf check-update | tail -n +2  | sed 's/\// /' | awk '{print $1 "\t" $3}'
